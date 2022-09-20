@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projects/home/home_screen.dart';
 
 class HomeSideMenu extends StatelessWidget {
   static const int settings = 10;
@@ -17,7 +18,7 @@ class HomeSideMenu extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 64),
           color: Theme.of(context).primaryColor,
           child: Text(
-            'CocoNile News App!',
+            'News App!',
             style: TextStyle(
                 color: Colors.white, fontWeight: FontWeight.bold, fontSize: 24),
           ),
@@ -25,6 +26,8 @@ class HomeSideMenu extends StatelessWidget {
         InkWell(
           onTap: () {
             onItemClickCallBack(categories);
+            title = 'News App!';
+            isVisible = false;
           },
           child: Row(children: [
             ImageIcon(

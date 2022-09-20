@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:projects/home/categories/category_widget.dart';
 
+import '../home_screen.dart';
+
 class CategoriesFragment extends StatelessWidget {
   var categories = Category.getAllCategories();
   Function onCategoryClickCallBack;
@@ -18,6 +20,8 @@ class CategoriesFragment extends StatelessWidget {
           return InkWell(
               onTap: () {
                 onCategoryClickCallBack(categories[index]);
+                title = categories[index].title;
+                isVisible = true;
               },
               child: CategoryWidget(categories[index], index));
         },
