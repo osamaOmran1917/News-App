@@ -6,7 +6,6 @@ import 'package:projects/home/news/news_fragment.dart';
 import 'package:projects/home/settings/settings.dart';
 
 String title = 'News App!';
-bool isVisible = false;
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'home screen';
@@ -30,6 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(bottom: Radius.circular(35))),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -38,7 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 title,
                 textAlign: TextAlign.center,
               )),
-              Visibility(visible: isVisible, child: Icon(Icons.search))
             ],
           ),
         ),

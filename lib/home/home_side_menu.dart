@@ -27,7 +27,6 @@ class HomeSideMenu extends StatelessWidget {
           onTap: () {
             onItemClickCallBack(categories);
             title = 'News App!';
-            isVisible = false;
           },
           child: Row(children: [
             ImageIcon(

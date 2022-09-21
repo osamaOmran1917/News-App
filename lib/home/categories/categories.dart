@@ -21,7 +21,6 @@ class CategoriesFragment extends StatelessWidget {
               onTap: () {
                 onCategoryClickCallBack(categories[index]);
                 title = categories[index].title;
-                isVisible = true;
               },
               child: CategoryWidget(categories[index], index));
         },
