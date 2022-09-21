@@ -16,7 +16,7 @@ class NewsList extends StatelessWidget {
       child: Column(
         children: [
           FutureBuilder<NewsResponse>(
-            future: ApiManager.getNewsBySourceId(source.id ?? ''),
+            future: ApiManager.getNews(sourceId: source.id ?? ''),
             builder: (_, snapShot) {
               if (snapShot.hasError) {
                 return Center(child: Text('${snapShot.error.toString()}'));
