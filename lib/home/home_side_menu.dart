@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:projects/home/home_screen.dart';
 
+enum SideMenuItems {
+  Settings,
+  Categories
+}
+
 class HomeSideMenu extends StatelessWidget {
-  static const int settings = 10;
-  static const int categories = 20;
   Function onItemClickCallBack;
 
   HomeSideMenu(this.onItemClickCallBack);
@@ -25,7 +28,7 @@ class HomeSideMenu extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            onItemClickCallBack(categories);
+            onItemClickCallBack(SideMenuItems.Categories);
             title = 'News App!';
           },
           child: Row(children: [
@@ -41,7 +44,7 @@ class HomeSideMenu extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            onItemClickCallBack(settings);
+            onItemClickCallBack(SideMenuItems.Settings);
           },
           child: Row(children: [
             SizedBox(

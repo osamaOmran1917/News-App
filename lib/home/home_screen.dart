@@ -81,10 +81,10 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {});
   }
 
-  void onSideMenuItemClick(int type) {
-    if (type == HomeSideMenu.categories) {
+  void onSideMenuItemClick(SideMenuItems Item) {
+    if (Item == SideMenuItems.Categories) {
       CurrentWidget = CategoriesFragment(onCategoryClick);
-    } else if (type == HomeSideMenu.settings) {
+    } else if (Item == SideMenuItems.Settings) {
       CurrentWidget = SettingsFragment();
     }
     Navigator.pop(context);
