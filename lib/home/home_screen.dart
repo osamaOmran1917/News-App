@@ -5,11 +5,9 @@ import 'package:projects/home/home_side_menu.dart';
 import 'package:projects/home/news/news_fragment.dart';
 import 'package:projects/home/news/search_screen.dart';
 import 'package:projects/home/settings/settings.dart';
-
 import '../api/api_manager.dart';
 import '../api/model/NewsResponse.dart';
 import 'news/news_widget.dart';
-
 String title = 'News App!';
 
 class HomeScreen extends StatefulWidget {
